@@ -1,0 +1,11 @@
+<tryton>
+    <data>
+        <record model="res.group" id="group_export_import">
+            <field name="name">Export/Import</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_export_import">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_export_import"/>
+        </record>
+    </data>
+</tryton>
