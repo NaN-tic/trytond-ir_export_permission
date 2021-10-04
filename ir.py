@@ -20,6 +20,7 @@ def in_group():
 
 
 class ExportImportMixin:
+    __slots__ = ()
 
     @classmethod
     def export_data(cls, records, fields_names):
@@ -32,4 +33,3 @@ class ExportImportMixin:
         if not in_group():
             return 0
         return super().import_data(fields_names, data)
-
