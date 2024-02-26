@@ -23,10 +23,10 @@ class ExportImportMixin:
     __slots__ = ()
 
     @classmethod
-    def export_data(cls, records, fields_names):
+    def export_data(cls, records, fields_names, header=False):
         if not in_group():
             return []
-        return super().export_data(records, fields_names)
+        return super().export_data(records, fields_names, header)
 
     @classmethod
     def import_data(cls, fields_names, data):
